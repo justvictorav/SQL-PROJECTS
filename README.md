@@ -33,14 +33,18 @@ SELECT *
 FROM [dbo].['Workplace Safety Data$']
 WHERE PLANT='GEORGIA'
 ```
+## 🖼️Preview
+![s1](s1.jpeg)
 ---
 
-### 2. Retrieve incidents that are not classified as plant-related
+### 2. Retrieve incidents that are not classified as FALL-related
 ```sql
 SELECT *
 FROM [dbo].['Workplace Safety Data$']
-WHERE [INCIDENT TYPE] <> 'PLANT'
+WHERE [INCIDENT TYPE] <> 'fall'
 ```
+## 🖼️Preview
+
 
 ---
 
