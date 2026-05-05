@@ -12,16 +12,25 @@ The operations team has requested a data analysis to:
 
 ---
 
-## Dataset
+## Dataset  
 Workplace Safety Data  
 
 Key fields include:
-- Plant  
-- Incident Type  
-- Incident Cost  
-- Gender  
-- Department  
+
 - Date  
+- Injury Location  
+- Gender  
+- Age Group  
+- Incident Type  
+- Days Lost  
+- Plant  
+- Report Type  
+- Shift  
+- Department  
+- Incident Cost  
+- WkDay  
+- Month  
+- Year
 
 ---
 
@@ -44,6 +53,7 @@ FROM [dbo].['Workplace Safety Data$']
 WHERE [INCIDENT TYPE] <> 'fall'
 ```
 ## 🖼️Preview
+![s2](s2.jpeg)
 
 
 ---
@@ -53,7 +63,9 @@ WHERE [INCIDENT TYPE] <> 'fall'
 SELECT *
 FROM[dbo].['Workplace Safety Data$']
 WHERE PLANT IN ('CALIFORNIA','FLORIDA')
-``` 
+```
+## 🖼️Preview
+![s3](s3.jpeg)
 
 ---
 
@@ -62,7 +74,9 @@ WHERE PLANT IN ('CALIFORNIA','FLORIDA')
 SELECT *
 FROM[dbo].['Workplace Safety Data$']
 WHERE PLANT = 'CALIFORNIA' AND [INCIDENT COST]>1000
-``` 
+```
+## 🖼️Preview
+![s4](s4.jpeg)
 
 ---
 
@@ -71,7 +85,9 @@ WHERE PLANT = 'CALIFORNIA' AND [INCIDENT COST]>1000
 SELECT *
 FROM[dbo].['Workplace Safety Data$']
 WHERE PLANT = 'CALIFORNIA' OR [INCIDENT COST]>1000
-``` 
+```
+## 🖼️Preview
+![s5](s5.jpeg)
 ---
 
 ### 6. Calculate average, total, and count of incident costs by plant and gender in the following plants (ALABAMA CALIFORNIA GEORGIA)
@@ -87,6 +103,8 @@ select [Plant]
   having plant in ('alabama','california','georgia')
  order by[Plant] asc
 ```
+## 🖼️Preview
+![26](26.jpeg)
 ---
 
 ### 7. Identify the highest-cost incident in each plant
@@ -102,6 +120,8 @@ select*
 from incident_rank
 where rank=1 
 ```
+## 🖼️Preview
+![s7](s7.jpeg)
 ---
 
 ## Key Insights
@@ -118,13 +138,10 @@ where rank=1
 
 ---
 
-## Project Structure
-sql-workplace-safety-analysis/
-│
-├── queries/
-│   └── safety_analysis.sql
-│
-├── outputs/
-│   └── screenshots.png
-│
-└── README.md
+## Conclusion
+
+This project demonstrates the use of SQL to analyze workplace safety data and extract meaningful business insights. By applying filtering, aggregation, window functions, and conditional logic, key patterns in incident occurrence and cost distribution were identified.
+
+The analysis highlights that incident costs vary significantly across plants and demographic groups, with certain locations consistently showing higher risk levels. High-cost incidents were successfully isolated and ranked, providing visibility into the most critical safety concerns.
+
+Overall, this project shows how SQL can be used not just for querying data, but for supporting data-driven decision-making. The insights generated can help organizations prioritize safety improvements, reduce incident costs, and enhance operational efficiency.
