@@ -1,8 +1,6 @@
-sql
 SELECT *
 FROM [dbo].['Workplace Safety Data$']
 WHERE PLANT='GEORGIA'
-
 
 SELECT *
 FROM [dbo].['Workplace Safety Data$']
