@@ -1,7 +1,7 @@
 **PROJECT 3**
 # SQL-PROJECT
 # TITLE: Workplace Safety Incident Analysis using SQL
-**SQL CODES**[sales data](https://github.com/justvictorav/justvictorav.github.io/blob/main/sql-codes)
+**SQL CODES**[sales data](https://github.com/justvictorav/justvictorav.github.io/blob/main/codes.sql)
 
  **Skill Used**:Data Retrieval (SELECT): Queried and extracted specific information from the database.
 Data Aggregation (SUM, COUNT): Calculated totals, such as sales and quantities, and counted records to analyze data trends.
